@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dollar conversion</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-weight: bolder;
+            font-style: italic;
+            font-family: arial;
+            
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           flex-direction: column;
+           background-image: linear-gradient(50deg,indigo,white);
+
+        }
+        label{
+            padding: 10px;
+        }
+        button{
+            background-color: lightgray;
+            border-radius: 10px;
+            padding: 10px;
+            color: darkslategray;
+            margin-top: 25px;
+            outline: none;
+            border: none;
+            box-shadow: 3px 3px 3px black;
+        }
+        input{
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        h2{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <label for="">Convert Dollar To Naira  :</label>
+    <input type="number" id="dollar" placeholder="put your dollar value">
+    <button onclick="dollarToNaira(dollar.value)">CONVERT</button>
+    
+    <h2 id="getValue"></h2>
+    <script>
+        function dollarToNaira(dollar) {
+            var conversion = (dollar * 1705.44)
+            getValue.innerText =  conversion +" " + `naira`
+        }
+    </script>
+</body>
+</html>
